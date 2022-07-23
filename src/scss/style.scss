@@ -19,10 +19,20 @@ body {
   font-style: normal;
   color: #fff;
   padding-top: 30px;
+  background: #282B38;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
 }
 
 a:focus,
@@ -72,5 +82,25 @@ textarea:focus {
     height: 27px;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+.header {
+  padding: 25px 0;
+  &__content {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu-link {
+    font-size: 16px;
+    line-height: 146%;
+    transition: all .3s;
+    &:hover {
+      color: $orange;
+    }
+  }
+  &__menu-item + .header__menu-item {
+    margin-left: 45px;
   }
 }
