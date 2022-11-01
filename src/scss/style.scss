@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import './vars';
 
 /*Colors*/
@@ -131,6 +131,23 @@ textarea:focus {
     transform: translateX(-50%);
   }
 }
+
+.arrows-right,
+  .arrows-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    cursor: pointer;
+  }
+
+  .arrows-right {
+    right: -75px;
+  }
+
+  .arrows-left {
+    left: -91px;
+  }
 
 .header {
   padding: 25px 0;
@@ -478,6 +495,9 @@ textarea:focus {
 // benefits
 
 .benefits {
+  width: 1820px;
+  margin: 0 auto;
+  border-radius: 20px;
   background-color: $gray;
   padding: 85px 0 70px;
 
@@ -614,22 +634,113 @@ textarea:focus {
     margin-right: 14px;
   }
 
-  &__arrows-right,
-  &__arrows-left {
+}
+
+.services {
+  background-color: $gray;
+  width: 1820px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 97px 0 100px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 49px;
+    position: relative;
+  }
+
+  &__item {
+    width: 360px;
+    height: 482px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 5px 15px 40px rgba(11, 24, 97, 0.32);
+  }
+
+  &__item-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgba(4, 5, 17, 0.91) 0%, rgba(88, 88, 88, 0) 100%);
+  }
+
+  &__item-content {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    content: '';
-    cursor: pointer;
+    left: 20px;
+    width: 328px;
   }
 
-  &__arrows-right {
-    right: -75px;
+  &__item-btn {
+    width: 153px;
+    height: 50px;
+    display: block;
   }
 
-  &__arrows-left {
-    left: -91px;
+  &__item-text {
+    margin-bottom: 14px;
+    font-weight: 300;
+  }
+
+  &__item-title {
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 124.5%;
   }
 }
+
+.about {
+  padding: 148px 0 30px;
+  &__items {
+    position: relative;
+  }
+
+  &__items-title {
+    position: relative;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 124.5%;
+    margin-bottom: 44px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 85px;
+      height: 2px;
+      background: $green;
+      bottom: -20px;
+      left: 0;
+    }
+  }
+  &__items-text {
+    font-size: 18px;
+    line-height: 170%;
+    width: 565px;
+    & p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    right: -45px;
+    top: -190px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
