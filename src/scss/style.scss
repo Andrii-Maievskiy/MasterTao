@@ -100,6 +100,7 @@ textarea:focus {
   line-height: 146%;
   padding: 23px 97px 22px 33px;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: url(../assets/img/arrow-circle.svg);
@@ -417,7 +418,7 @@ textarea:focus {
     background-color: $gray;
     padding: 48px 53px 41px;
     border-radius: 20px;
-    display: none;
+    // display: none;
     position: relative;
   }
 
@@ -696,7 +697,7 @@ textarea:focus {
 }
 
 .about {
-  padding: 148px 0 30px;
+  padding: 148px 0 120px;
   &__items {
     position: relative;
   }
@@ -732,6 +733,264 @@ textarea:focus {
     top: -190px;
   }
 }
+
+// questions
+
+.question {
+  padding: 27px 0 100px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  &__items {
+    margin-right: 34px;
+  }
+
+  &__item {
+    width: 716px;
+    height: 64px;
+    border: 1px solid #3A444E;
+    border-radius: 10px;
+    padding: 21px 10px 21px 34px;
+    margin-bottom: 16px;
+    position: relative;
+    animation: fade 3s;
+
+    &::after {
+      position: absolute;
+      top: 18px;
+      right: 19px;
+      content: url(../assets/img/arrow-circle-left.svg);
+      width: 27px;
+      height: 27px;
+      z-index: 99;
+      cursor: pointer;
+    }
+
+    &.active {
+      height: 152px;
+      background-color: #fff;
+      color: #282B38;
+    }
+
+    &.active::after {
+      content: url(../assets/img/arrow-circle-left-orange.svg);
+    }
+
+    &.active .question__item-text {
+      display: block;
+    }
+  }
+
+  &__item-text {
+    margin-top: 20px;
+    display: none;
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 124.5%;
+  }
+
+  &-form {
+    margin-right: 0;
+    & input {
+      width: 100%;
+    }
+    & textarea {
+      width: 100%;
+      resize: none;
+      height: 70px;
+      padding: 19px;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 126%;
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+  }
+}
+
+.form__question {
+  background: $gray;
+  box-shadow: 5px 15px 40px rgba(11, 24, 97, 0.32);
+  border-radius: 20px;
+  padding: 38px 40px;
+
+  &-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 126%;
+    margin-bottom: 8px;
+  }
+
+  &-text {
+    font-size: 17px;
+    line-height: 126%;
+    margin-bottom: 26px;
+  }
+
+  &-btn {
+    width: 100%;
+    display: block;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// cooperation
+
+.cooperation {
+  padding: 92px 340px;
+  background: linear-gradient(0deg, #363A4D, #363A4D), #F7F7F7;
+  border-radius: 20px;
+  width: 1820px;
+  margin: 0 auto;
+
+  &__title {
+    &::after {
+      background: $green;
+    }
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    font-weight: 300;
+    
+  }
+
+  &__inner {
+    margin-top: 85px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__text p {
+    margin-bottom: 45px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 156.5%;
+  }
+
+  &__img-right {
+    margin-left: 30px;
+    border-radius: 20px;
+  }
+
+  &__img-left {
+    margin-right: 62px;
+  }
+
+  &__img-right img,
+  &__img-left  img{
+    border-radius: 20px;
+  }
+
+}
+
+// footer
+
+.footer {
+  padding: 70px 0 50px;
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background: $orange;
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contacts {
+    width: 263px;
+    margin-right: 150px;
+  }
+
+  &__logo {
+    margin-bottom: 29px;
+  }
+
+  &__phone,
+  &__adress,
+  &email {
+    line-height: 2.2;
+  }
+
+  &__adress {
+    width: 283px;
+  }
+
+  &__social {
+    margin-top: 21px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 146%;
+    margin-bottom: 14px;
+  }
+
+  &__delivery {
+   margin-right: 97px;
+  }
+
+  &__services {
+   margin-right: 72px;
+  }
+
+  &__delivery-link,
+  &__services-link,
+  &__info-link {
+    color: #85899C;
+    font-size: 16px;
+    line-height: 160.5%;
+    line-height: 2.5;
+    transition: all .3s;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__delivery-link {
+    width: 114px;
+    display: block;
+  }
+
+  &__services-link {
+    width: 214px;
+    display: block;
+  }
+  &__info-link {
+    width: 300px;
+    display: block;
+  }
+
+  &__social-link {
+    margin-right: 8px;
+  }
+}
+
+
 
 
 
